@@ -6,6 +6,7 @@ namespace App\Entity;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * A book.
@@ -28,6 +29,7 @@ class Book
      * @var string|null The ISBN of this book (or null if doesn't have one).
      *
      * @ORM\Column(nullable=true)
+     * @Assert\Isbn
      */
     public $isbn;
 
@@ -42,6 +44,7 @@ class Book
      * @var string The description of this book.
      *
      * @ORM\Column(type="text")
+     * @Assert\NotBlank
      */
     public $description;
 
@@ -56,6 +59,7 @@ class Book
      * @var \DateTimeInterface The publication date of this book.
      *
      * @ORM\Column(type="datetime")
+     * @Assert\NotBlank
      */
     public $publicationDate;
 
@@ -63,6 +67,7 @@ class Book
      * @var Review[] Available reviews for this book.
      *
      * @ORM\OneToMany(targetEntity="Review", mappedBy="book", cascade={"persist", "remove"})
+     * @Assert\NotNull
      */
     public $reviews;
 
