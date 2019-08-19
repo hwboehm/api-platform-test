@@ -91,6 +91,7 @@
       <path value="$PROJECT_DIR$/api/vendor/doctrine/doctrine-cache-bundle" />
       <path value="$PROJECT_DIR$/api/vendor/composer" />
       <path value="$PROJECT_DIR$/api/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/api/vendor/webonyx/graphql-php" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
