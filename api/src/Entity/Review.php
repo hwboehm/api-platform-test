@@ -68,4 +68,9 @@ class Review
     {
         return $this->id;
     }
+
+    public function setId(int $newid)
+    {
+        $this->id = $newid;
+    }
 }

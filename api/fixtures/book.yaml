@@ -1,5 +1,6 @@
 App\Entity\Book:
-  b_{1..5000}:
+  book_{1..500}:
+    id: <current()>
     title: <realText(20,5)>
     isbn: <isbn13()>
     description: <realText(200,3)>

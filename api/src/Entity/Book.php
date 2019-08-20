@@ -3,6 +3,7 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiProperty;
 use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -19,6 +20,7 @@ class Book
     /**
      * @var int The id of this book.
      *
+     * @ApiProperty(identifier=true)
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -79,5 +81,10 @@ class Book
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    public function setId(int $newid)
+    {
+        $this->id = $newid;
     }
 }

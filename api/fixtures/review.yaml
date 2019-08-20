@@ -1,0 +1,9 @@
+App\Entity\Review:
+  review_{1..500}:
+    id: <current()>
+    rating: <numberBetween(1,5)>
+    body: <realText(300,2)>
+    author: <name()>
+    publicationDate: <dateTime()>
+    book: '@book_<current()>'
+    
